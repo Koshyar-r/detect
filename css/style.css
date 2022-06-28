@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
@@ -11,7 +11,29 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #0846e6;
+    background-color: #051b52;
+    animation: color-change-5x 8s linear infinite alternate both;
+}
+@keyframes color-change-5x {
+    0% {
+      background: #09329b;
+    }
+    25% {
+      background: #8b0606;
+    }
+    50% {
+      background: #059b26;
+    }
+    75% {
+      background: #d6c211;
+    }
+    100% {
+      background: #04033d;
+    }
+}  
+::selection {
+    background-color: #051b52;
+    color: #FFF;
 }
 .box.active .text {
     display: none;
@@ -20,15 +42,16 @@ body {
     width: 290px;
     background-color: #FFF;
     border-radius: 10px;
-    padding: 25px;   
+    padding: 25px;
 }
 .text {
     font-size: 30px;
     font-weight: 500;
     text-align: center;
-    color: #0846e6;
+    color: #051b52;
     margin-bottom: 5px;
 }
+
 .content, .key-code, .details {
     display: flex;
     justify-content: center;
@@ -46,11 +69,11 @@ body {
     height: 110px;
     margin-bottom: 15px;
     border-radius: 50%;
-    border: 5px solid #0846e6;
+    border: 5px solid #051b52;
 }
 .key-code, .key-name {
     font-size: 45px;
-    color: #0846e6;
+    color: #051b52;
     font-weight: 600;
 }
 .content .details {
